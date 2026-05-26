@@ -1,0 +1,25 @@
+#include <stdio.h>
+
+int main()
+{
+    int n, i;
+    double fatorial = 1;
+
+    printf("Digite um numero: ");
+    scanf("%d", &n);
+
+    if(n < 0)
+    {printf("Nao existe numero fatorial negativo");}
+    else
+    {
+        for(i = 1; i <= n; i++)
+        {
+            fatorial *= i;
+        }
+
+    printf("\nFatorial de %d = %.00lf\n", n, fatorial);
+
+    }
+
+   return 1;
+}
