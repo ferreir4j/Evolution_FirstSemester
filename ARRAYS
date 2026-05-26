@@ -1,0 +1,55 @@
+#include <stdio.h>
+#define MAX 5
+
+int main()
+{
+    /*declarei tres arrays com 5 posicoes cada um. Os arrays deverao ser denominados 'prova'
+    (tipo float), 'Exame' (tipo float) e 'Media Final (tambem do tipo float).*/
+    float prova[MAX] = {7.0, 5.5, 9.0, 1.0, 5.0};
+    float exame[MAX];
+    float mediaFinal[MAX];
+
+
+    //cada posicao do array 'prova' devera ser preenchida com dados lidos do teclado;
+    for(int indice = 0; indice < MAX; indice++)
+    {
+        printf("\nDigite a prova de indice %d: ", indice);
+        scanf("%f", &prova[indice]);
+    }
+
+    //cada posicao do array 'Exame' devera ser preenchida com dados lidos do teclado;
+    for(int indice = 0; indice < MAX; indice++)
+    {
+        printf("\nDigite a nota do exame %d: ", indice);
+        scanf("%f", &exame[indice]);
+    }
+
+
+    /*o programa devera preencher cada posicao de 'MediaFinal' assim:
+     se o valor armazenado em 'Prova' for menor que 4,0 ou maior ou igual a 6,0,
+    copiar esse valor no array 'MediaFinal';*/
+    for(int indice = 0; indice < MAX; indice++)
+    {
+         if(prova[indice] < 4 || prova[indice] >= 6)
+    {
+        mediaFinal[indice] = prova[indice];
+    }
+
+    /*se o valor armazenado estiver entre 4,0 e 5,99, copiar o valor correspondente do
+    array 'Exame' no array 'MediaFinal'.*/
+    else
+    {
+        mediaFinal[indice] = exame[indice];
+    }
+    }
+
+    //ao final os tres arrays deverao ser impressos na tela.
+    for(int indice = 0; indice < MAX; indice++)
+    {
+        printf("\n\nA media final do indice %d eh %.1f", indice, mediaFinal[indice]);
+        printf("\nO resultado da prova %d eh %.1f", indice, prova[indice]);
+        printf("\nO resultado do exame %d eh %.1f", indice, exame[indice]);
+    }
+
+    return 0;
+}
