@@ -1,0 +1,27 @@
+#include <stdio.h>
+
+int main()
+{
+    float nota1, nota2, nota3, media;
+
+    //Leia 3 notas de um aluno e calcule a media.
+    printf("Qual a nota da primeira prova?: ");
+    scanf("%f", &nota1);
+
+    printf("\nQual a nota da segunda prova?: ");
+    scanf("%f", &nota2);
+
+    printf("\nQual a nota da terceira prova?: ");
+    scanf("%f", &nota3);
+
+    media = (nota1 + nota2 + nota3) / 3;
+
+    printf("\nResultado da Media: %.2f\n", media);
+
+    //Se a media for maior ou igual a 7, mostre: Aprovado, Senao, Reprovado.
+    if(media >= 7)
+    {printf("\nAPROVADO!\n");}
+    else{printf("\nREPROVADO! Estudar mais.");}
+
+    return 1;
+}
